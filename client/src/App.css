@@ -33,6 +33,8 @@ body,
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
   border-radius: 12px 12px 0px 0px;
   padding: 10px;
   background-color: #e1e1e1;
@@ -53,6 +55,15 @@ body,
   font-weight: 100;
   display: flex;
   align-items: center;
+}
+
+.not-complete-check {
+  display: flex;
+  align-items: center;
+}
+
+.not-complete-title {
+  margin-left: 8px;
 }
 
 .todo-item-container.done {

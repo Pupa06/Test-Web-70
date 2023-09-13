@@ -1,0 +1,28 @@
+{
+    "en": {
+        "header": {
+            "titleLeft": "You have",
+            "titleRight": "tasks left!",
+            "NotFinishedOnly":"Not finished only"
+        },
+        "footer": {
+            "title": "Made by MindX 🔥"
+        },
+        "form":{
+            "button":"Submit"
+        }
+    },
+    "vn": {
+        "header": {
+            "titleLeft": "Bạn còn",
+            "titleRight": "công việc!",
+            "NotFinishedOnly":"Tác vụ chưa hoàn thành"
+        },
+        "footer": {
+            "title": "Được thực hiện bởi MindX 🔥"
+        },
+        "form":{
+            "button":"Gửi"
+        }
+    }
+}

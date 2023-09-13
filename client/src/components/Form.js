@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { LanguageContext } from './LanguageContext.js';
+import translationsData from '../translationsData.json';
 
 const Form = () => {
   const [todos, setTodos] = useState([]);
 
   const [newInput, setNewInput] = useState("");
+
+  const [dueDate, setDueDate] = useState("")
+
+  const { language } = useContext(LanguageContext);
+  const translations = translationsData[language].form;
 
   const handleChange = (e) => {
     setNewInput(e.target.value);
@@ -14,6 +21,7 @@ const Form = () => {
       const newTask = {
         id: crypto.randomUUID(),
         title: newInput,
+        dueDate: dueDate,
         completed: false,
       };
 
@@ -38,7 +46,12 @@ const Form = () => {
         onChange={handleChange}
         placeholder="Enter task ..."
       />
-      <button>Submit</button>
+      <input
+        type="date"
+        value={dueDate}
+        onChange={(e) => setDueDate(e.target.value)}
+      />
+      <button>{translations.button}</button>
     </form>
   );
 };
