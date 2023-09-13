@@ -13,6 +13,10 @@ const Header = ({ setNotDone }) => {
     setTodos(savedTasks);
   }, []);
 
+  useEffect(() => {
+    const incompleteTasks = todos.filter((todo) => !todo.completed);
+    setNotDone(showNotDone); // Cập nhật setNotDone với giá trị mới
+  }, [todos, showNotDone]);
 
   const handleClickBox = (e) => {
     setShowNotDone(e.target.checked);
