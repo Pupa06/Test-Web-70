@@ -13,15 +13,13 @@ const Header = ({ setNotDone }) => {
     setTodos(savedTasks);
   }, []);
 
-  const incompleteTasks = todos.filter((todo) => !todo.completed);
 
   const handleClickBox = (e) => {
     setShowNotDone(e.target.checked);
-    setNotDone(e.target.checked)
   };
   return (
     <div className="header">
-      <span>{translations.titleLeft} {incompleteTasks.length} {translations.titleRight}</span>
+      <span>{translations.titleLeft} {todos.filter(todo => !todo.completed).length} {translations.titleRight}</span>
       <span className="not-complete-check">
         <input
           type="checkbox"

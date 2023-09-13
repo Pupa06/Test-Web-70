@@ -34,11 +34,20 @@ const TodoList = ({ notDone }) => {
   const filteredTodos = notDone ? todos.filter((todo) => !todo.completed) : todos;
 
   const getRemainingDays = (dueDate) => {
+    if (!dueDate) {
+      return "Không";
+    }
+  
     const today = new Date();
     const due = new Date(dueDate);
     const timeDiff = due.getTime() - today.getTime();
     const remainingDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-    return remainingDays;
+  
+    if (remainingDays < 0) {
+      return "Hết hạn";
+    }
+  
+    return `${remainingDays}`;
   };
 
   return (
