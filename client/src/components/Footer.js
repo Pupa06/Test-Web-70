@@ -31,7 +31,7 @@ const Footer = () => {
                         marginRight: "12px"
                     }}
                 >
-                    Available on:
+                    {translations.available}
                 </span>
                 <div>
                     <span

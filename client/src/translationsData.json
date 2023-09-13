@@ -6,7 +6,8 @@
             "NotFinishedOnly":"Not finished only"
         },
         "footer": {
-            "title": "Made by MindX 🔥"
+            "title": "Made by MindX 🔥",
+            "available": "Available on:"
         },
         "form":{
             "button":"Submit"
@@ -19,7 +20,8 @@
             "NotFinishedOnly":"Tác vụ chưa hoàn thành"
         },
         "footer": {
-            "title": "Được thực hiện bởi MindX 🔥"
+            "title": "Được thực hiện bởi MindX 🔥",
+            "available": "Chuyển đổi ngôn ngữ:"
         },
         "form":{
             "button":"Gửi"
